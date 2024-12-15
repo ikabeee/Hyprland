@@ -1,0 +1,1 @@
+# Hyprland plug and play 🎮
