@@ -156,13 +156,22 @@ rm -rf yay
 echo -e "Basic config has been applied"
 
 # Install packages
-
-read -n1 -rep "Would you like to install the following packages?"
-
 echo -e "List of packages: \n"
-
 for package in "${PACKAGES[@]}"; do 
     echo -e "$package \n"
+done
+
+read -n1 -rep "Would you like to install the following above packages?" INST
+
+if [[ $INST == "Y" || $INST == "y" ]]; then
+    for package in "${PACKAGES[@]}"; do 
+        echo -e "$package \n"
+    done
+else
+    echo -e "Exiting..."
+    exit 1
+fi
+
 for package in "${PACKAGES[@]}"; do
     echo -e "Installing $package... \n"
     done
