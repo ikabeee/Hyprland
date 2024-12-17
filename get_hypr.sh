@@ -96,7 +96,7 @@ PACKAGES=(
 
 # Verify permission
 
-if [[ $EUID -eq 0 ]] then;
+if [[ $EUID -eq 0 ]]; then
     echo "Do not execute this script as root. Please, use sudo privileges"
     exit 1
 fi
