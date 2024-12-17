@@ -174,5 +174,5 @@ fi
 
 for package in "${PACKAGES[@]}"; do
     echo -e "Installing $package... \n"
-    sudo pacman -S --needed --noconfirm "$package"
+    sudo yay -S --needed --noconfirm "$package"
     done
